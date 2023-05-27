@@ -1,0 +1,102 @@
+// 存储的数据类型默认为整数型
+
+// 线性表：顺序存储
+typedef struct
+{
+    int elem[MAXSIZE]; // 存储数据的一维数组
+    int last;          // 最后一个元素的下标
+} SeqList;
+
+// 线性表:链式存储
+typedef struct node
+{
+    int data;
+    struct node *next;
+} LNode, *LinkList;
+
+// 栈：顺序栈
+typedef struct
+{
+    int elem[]; // 存放栈中元素的一维数组
+    int top;    // 存放栈顶元素的下标
+} SeqStack;
+
+// 栈：链栈
+typedef struct node
+{
+    int data;
+    struct node *next;
+} LinkStackNode;
+typedef LinkStackNode *LinkStack;
+
+// 队列：链队列
+typedef struct Node
+{
+    int data;          // 数据域
+    struct Node *next; // 指针域
+} LinkQueueNode;
+typedef struct
+{
+    LinkQueueNode *front;
+    LinkQueueNode *rear;
+} LinkQueue;
+
+// 队列：循环队列
+typedef struct
+{
+    int element[MAXSIZE]; // 队列的元素空间
+    int front;            // 头指针指示器
+    int rear;             // 为指针指示器
+} SeqQueue;
+
+// 串：定长顺序串
+typedef struct
+{
+    char ch[MAXLEN]; // 存储字符的一维数组
+    int len;         // 字符串长度
+} SString;
+
+// 串：堆串1
+typedef struct
+{
+    int len;   // 串长度
+    int start; // 起始字符的位置
+} HeapString;
+// 串：堆串2
+typedef struct
+{
+    char *ch; // 串的起始地址
+    int len;  // 串的长度
+} HString;
+
+// 串：区块串
+typedef struct Block
+{
+    char ch[BLOCK_SIZE];
+    struct Block *next;
+} Block;
+typedef struct
+{
+    Block *head;
+    Block *tail;
+} BLString;
+
+// 稀疏矩阵
+typedef struct
+{
+    int row, col; // 该非零元素的行下标和列下标
+    int e;        // 非零元素值
+} Triple;
+typedef struct
+{
+    Triple data[MAXSIZE + 1]; // 非零元素的三元组表，data[0]表示未用；
+    int m, n, len;            // 矩阵的行数，列数和非零元素的个数；
+} TSMatrix;
+
+// 二叉树
+typedef struct Node
+{
+    int data;
+    struct Node *LChild;
+    struct Node *RChild;
+} BitNode, *BiTree;
