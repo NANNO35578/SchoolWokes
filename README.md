@@ -1,4 +1,4 @@
-# qt creator  4.15.0 style theme and code theme
+# qt creator  4.15.0 everforest style theme and code theme
 
 - i write it with ai and [sainnhe's everforest color](https://github.com/sainnhe/everforest)
 
